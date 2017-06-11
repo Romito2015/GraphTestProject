@@ -13,6 +13,8 @@
 		5AA768FB1EEDAF550079E0F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA768F91EEDAF550079E0F3 /* Main.storyboard */; };
 		5AA768FD1EEDAF550079E0F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA768FC1EEDAF550079E0F3 /* Assets.xcassets */; };
 		5AA769001EEDAF550079E0F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA768FE1EEDAF550079E0F3 /* LaunchScreen.storyboard */; };
+		5AA769091EEDAFB10079E0F3 /* ScrollableGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA769081EEDAFB10079E0F3 /* ScrollableGraphView.swift */; };
+		5AA7690B1EEDAFD80079E0F3 /* CustomBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA7690A1EEDAFD80079E0F3 /* CustomBottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		5AA768FC1EEDAF550079E0F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AA768FF1EEDAF550079E0F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AA769011EEDAF550079E0F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AA769071EEDAFB10079E0F3 /* GraphTestProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GraphTestProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		5AA769081EEDAFB10079E0F3 /* ScrollableGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableGraphView.swift; sourceTree = "<group>"; };
+		5AA7690A1EEDAFD80079E0F3 /* CustomBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +67,14 @@
 				5AA768F41EEDAF550079E0F3 /* AppDelegate.m */,
 				5AA768F61EEDAF550079E0F3 /* ViewController.h */,
 				5AA768F71EEDAF550079E0F3 /* ViewController.m */,
+				5AA7690A1EEDAFD80079E0F3 /* CustomBottomView.swift */,
+				5AA769081EEDAFB10079E0F3 /* ScrollableGraphView.swift */,
 				5AA768F91EEDAF550079E0F3 /* Main.storyboard */,
 				5AA768FC1EEDAF550079E0F3 /* Assets.xcassets */,
 				5AA768FE1EEDAF550079E0F3 /* LaunchScreen.storyboard */,
 				5AA769011EEDAF550079E0F3 /* Info.plist */,
 				5AA768F01EEDAF550079E0F3 /* Supporting Files */,
+				5AA769071EEDAFB10079E0F3 /* GraphTestProject-Bridging-Header.h */,
 			);
 			path = GraphTestProject;
 			sourceTree = "<group>";
@@ -111,6 +119,7 @@
 					5AA768EC1EEDAF550079E0F3 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 76YES2398T;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -151,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA769091EEDAFB10079E0F3 /* ScrollableGraphView.swift in Sources */,
 				5AA768F81EEDAF550079E0F3 /* ViewController.m in Sources */,
+				5AA7690B1EEDAFD80079E0F3 /* CustomBottomView.swift in Sources */,
 				5AA768F51EEDAF550079E0F3 /* AppDelegate.m in Sources */,
 				5AA768F21EEDAF550079E0F3 /* main.m in Sources */,
 			);
@@ -273,11 +284,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 76YES2398T;
 				INFOPLIST_FILE = GraphTestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.romito.GraphTestProject;
+				PRODUCT_MODULE_NAME = GraphTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GraphTestProject/GraphTestProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -285,11 +302,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 76YES2398T;
 				INFOPLIST_FILE = GraphTestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.romito.GraphTestProject;
+				PRODUCT_MODULE_NAME = GraphTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GraphTestProject/GraphTestProject-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

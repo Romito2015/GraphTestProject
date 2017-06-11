@@ -1192,6 +1192,36 @@ import UIKit
     fileprivate func graphPoint(forIndex index: Int) -> GraphPoint {
         return graphPoints[index]
     }
+    
+    //RandomData Generation
+    public static func generateRandomData(_ numberOfItems: Int, max: Double) -> [Double] {
+        var data = [Double]()
+        for _ in 0 ..< numberOfItems {
+            var randomNumber = Double(arc4random()).truncatingRemainder(dividingBy: max)
+            
+            if(arc4random() % 100 < 10) {
+                randomNumber *= 3
+            }
+            
+            data.append(randomNumber)
+        }
+        return data
+    }
+    public static func generateSequentialLabels(_ numberOfItems: Int, text: String) -> [String] {
+        var labels = [String]()
+        for i in 0 ..< numberOfItems {
+            labels.append("\(text)\n \(i+1)")
+        }
+        return labels
+    }
+    
+    public static func generateSequentialCustomBottomLabelsData(_ numberOfItems: Int, text: String) -> [XCoordinateObject] {
+        var vData = [XCoordinateObject]()
+        for i in 0 ..< numberOfItems {
+            vData.append(XCoordinateObject(name: text, value: "\(i + 1)"))
+        }
+        return vData
+    }
 }
 
 
@@ -2165,3 +2195,20 @@ private struct Easings {
         return pow(2,-10*t) * sin((t-p/4)*(2 * .pi)/p) + 1;
     }
 }
+
+@objc open class XCoordinateObject: NSObject {
+    var name: String = ""
+    var value: String = ""
+    
+    init(name: String, value: String) {
+        self.name = name
+        self.value = value
+    }
+}
+
+//extension XCoordinateObject: Equatable {}
+//public func ==(lhs: XCoordinateObject, rhs: XCoordinateObject) -> Bool {
+//    return lhs.name == rhs.name && lhs.value == rhs.value
+//}
+
+

@@ -15,8 +15,8 @@ class CustomBottomView: UIView {
     fileprivate var dataPointSpacing: CGFloat = 80
     
     
-    public var containerHeight: CGFloat = 60
-    let paddingHeight: CGFloat = 8
+    public var containerHeight: CGFloat = 50
+    let paddingHeight: CGFloat = 6
     
     lazy var labelHeight: CGFloat = { [unowned self] in
         return (self.containerHeight - self.paddingHeight) / 2
@@ -43,8 +43,8 @@ class CustomBottomView: UIView {
         self.upperTextLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: containerWidth,
                                                                            height: labelHeight)))
         self.upperTextLabel.layer.backgroundColor = UIColor.white.cgColor
-        self.upperTextLabel.layer.borderColor = UIColor.yellow.cgColor
-        self.upperTextLabel.layer.borderWidth = 1
+        self.upperTextLabel.layer.borderColor = UIColor(colorLiteralRed: 255/255, green: 200/255, blue: 53/255, alpha: 1).cgColor
+        self.upperTextLabel.layer.borderWidth = 2
         self.upperTextLabel.layer.cornerRadius = labelHeight/2
         self.upperTextLabel.textAlignment = .center
         

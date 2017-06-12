@@ -33,6 +33,12 @@ static const NSInteger numberOfDataItems = 29;
 }
 
 - (ScrollableGraphView *)createDarkGraphWithFrame:(CGRect)frame {
+    CGFloat gradiations = 255.f;
+    UIColor *sunYellow = [UIColor colorWithRed:255/gradiations green:200/gradiations blue:53/gradiations alpha:1];
+    UIColor *squash = [UIColor colorWithRed:245/gradiations green:166/gradiations blue:35/gradiations alpha:1];
+    
+    UIColor *graphYellow = [UIColor colorWithRed:250/gradiations green:217/gradiations blue:97/gradiations alpha:1];
+    
     ScrollableGraphView *graphView = [[ScrollableGraphView alloc] initWithFrame:self.view.frame];
     graphView.backgroundFillColor = [UIColor whiteColor];
     graphView.bottomMargin = 50.f;
@@ -46,21 +52,21 @@ static const NSInteger numberOfDataItems = 29;
     graphView.fillColor = [UIColor whiteColor];
     graphView.fillGradientType = 0;
     graphView.fillGradientStartColor = [UIColor whiteColor];
-    graphView.fillGradientEndColor = [UIColor blueColor];
+    graphView.fillGradientEndColor = graphYellow;
     
     graphView.dataPointType = 0;
     graphView.showOnlyLastDataPoint = true;
-    graphView.dataPointSize = 15.f;
-    graphView.dataPointFillColor = [UIColor redColor];
-    graphView.dataPointBorderColor = [UIColor greenColor];
-    graphView.dataPointBorderWidth = 6.f;
+    graphView.dataPointSize = 8.f;
+    graphView.dataPointFillColor = squash;
+    graphView.dataPointBorderColor = [UIColor whiteColor];
+    graphView.dataPointBorderWidth = 3.f;
     
     graphView.dataPointSpacing = 80.f;
     
     
     graphView.referenceLineLabelFont = [UIFont boldSystemFontOfSize:8.f];
     graphView.referenceLineColor = [[UIColor whiteColor] colorWithAlphaComponent:0.2f];
-    graphView.referenceLineLabelColor = [UIColor blueColor];
+    graphView.referenceLineLabelColor = [UIColor lightGrayColor];
     graphView.numberOfIntermediateReferenceLines = 3;
     
     graphView.dataPointLabelColor = [[UIColor blackColor] colorWithAlphaComponent:0.5f];

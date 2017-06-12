@@ -288,6 +288,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 76YES2398T;
 				INFOPLIST_FILE = GraphTestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.romito.GraphTestProject;
 				PRODUCT_MODULE_NAME = GraphTestProject;
@@ -306,6 +307,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 76YES2398T;
 				INFOPLIST_FILE = GraphTestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.romito.GraphTestProject;
 				PRODUCT_MODULE_NAME = GraphTestProject;
@@ -334,6 +336,7 @@
 				5AA769061EEDAF550079E0F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1626,6 +1626,11 @@ private class DataPointDrawingLayer: ScrollableGraphViewDrawingLayer {
         self.lineWidth = dataPointBorderWidth ?? 0
         self.strokeColor = (dataPointBorderColor ?? fillColor).cgColor
         self.fillColor = fillColor.cgColor
+        
+        self.shadowColor = UIColor.black.cgColor
+        self.shadowOffset = .zero
+        self.shadowRadius = dataPointBorderWidth ?? 0
+        self.shadowOpacity = 0.7
     }
     
     required init?(coder aDecoder: NSCoder) {
